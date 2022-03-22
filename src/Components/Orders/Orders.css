@@ -7,3 +7,18 @@
   right: 0;
   top: 0;
 }
+
+.clearCart,.reviewOrder {
+  border: none;
+  background: red;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 90%;
+  height: 45px;
+  margin: 10px;
+  cursor: pointer;
+}
+.reviewOrder{
+  background-color: orange;
+}
