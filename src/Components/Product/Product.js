@@ -1,7 +1,8 @@
 import React from 'react'
 import './Product.css'
 
-export default function Product({ pd }) {
+export default function Product({ pd, addCart }) {
+
   return (
     <div className='product'>
       <img src={pd.img} alt="" />
@@ -9,7 +10,7 @@ export default function Product({ pd }) {
       <h4>Price: ${pd.price}</h4>
       <p>Manufacturer: {pd.seller}</p>
       <p>Ratings: {pd.ratings}</p>
-      <button>Add to Cart</button>
+      <button onClick={() => addCart(pd)}>Add to Cart ✜</button>
     </div>
   )
 }
