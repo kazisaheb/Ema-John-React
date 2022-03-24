@@ -1,15 +1,15 @@
 import './Orders.css'
 
-export default function Orders(props) {
+export default function Orders({ cart }) {
 
   return (
     <div className='Orders'>
       <h3>Order Summery</h3>
-      <p>Selected Items: {props.itm}</p>
-      <p>Total Price: $ {props.price}</p>
-      <p>Shipping Charge: </p>
-      <p>Tax: $</p>
-      <h4>Grand Total: $</h4>
+      <p>Selected Items: {cart.length}</p>
+      <p>Total Price: $ {cart.price}</p>
+      <p>Shipping Charge: {cart.shipping}</p>
+      <p>Tax: ${cart.price * .01}</p>
+      <h4>Grand Total: ${cart.price + cart.shipping + cart.price * .01}</h4>
       <button className='clearCart'>Clear Cart ✘</button>
       <br />
       <button className='reviewOrder'>Review Order ➽</button>
