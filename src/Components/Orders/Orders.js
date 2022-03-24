@@ -5,7 +5,7 @@ export default function Orders({ cart }) {
   return (
     <div className='Orders'>
       <h3>Order Summery</h3>
-      <p>Selected Items: {cart.length}</p>
+      <p>Selected Items: </p>
       <p>Total Price: $ {cart.price}</p>
       <p>Shipping Charge: {cart.shipping}</p>
       <p>Tax: ${cart.price * .01}</p>

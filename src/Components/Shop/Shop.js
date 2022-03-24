@@ -15,15 +15,19 @@ export default function Shop() {
 
   //State & function for Order Cart
   const [cart, setCart] = useState([])
-  console.log(cart)
   const addCart = (pd) => {
     setCart(pd)
   }
 
+  // localStorage cart data
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+
   return (
     <div className='shopPage'>
       <Products pds={pds} addCart={addCart} />
-      <Orders cart={cart} />
+      <Orders cart={JSON.parse(localStorage.getItem('cart'))} />
     </div>
   )
 }
